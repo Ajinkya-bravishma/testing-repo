@@ -4559,6 +4559,9 @@ const App = () => {
                 <div key={index}>
                   <span>{`${facilitiesKey} : ${facilities[facilitiesKey]}`}</span>
                 </div>
+                <div key={index}>
+                <span>{`${facilitiesKey} : ${facilities[facilitiesKey]}`}</span>
+              </div>
               )
             });
           });
