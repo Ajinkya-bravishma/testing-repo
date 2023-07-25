@@ -36,3 +36,90 @@
     transform: rotate(360deg);
   }
 }
+
+/* ToggleSlider.css */
+
+.toggle-slider-container {
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 75%;
+  background: #ccc;
+  outline: none;
+  border-radius: 34px;
+  transition: background 0.4s;
+}
+
+.toggle-slider-checked{
+  background: #00cc66; /* Green color for ON state */
+  -webkit-appearance: none;
+  width: 100%;
+  height: 75%;
+  outline: none;
+  border-radius: 34px;
+  transition: background 0.4s;
+}
+
+.toggle-slider-checked::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.toggle-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.slider-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.on {
+  display: block;  
+  transform: translate(-80%, -70%);
+  color: #ffffff;
+}
+
+.off {
+  display: block;
+  transform: translate(0%, -70%);
+  color: #282727;
+}
+
+/* Styling for the active state */
+.toggle-slider:checked {
+  background: #00cc66; /* Green color for ON state */
+}
+
+.toggle-slider:checked::-webkit-slider-thumb {
+  background: #ffffff; /* White color for the thumb in ON state */
+}
+
+.toggle-slider:checked + .slider-label.on {
+  display: none;
+}
+
+.toggle-slider:checked + .slider-label.off {
+  display: block;
+}
